@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:f="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 targetNamespace="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 elementFormDefault="qualified">
 <xsd:element name="lloguerCotxes">
@@ -13,10 +14,10 @@ elementFormDefault="qualified">
 						<xsd:element name="equipacio" type="xsd:string" >
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="climatitzador" 	type="xsd:string"/>
-									<xsd:element name="airbagsLaterals" type="xsd:string"/>
-									<xsd:element name="automatic" 			type="xsd:string"/>
-									<xsd:element name="cadiraNinPetit" 	type="xsd:string"/>
+									<xsd:element name="climatitzador" 	type="xsd:string" type="f:tipo1"/>
+									<xsd:element name="airbagsLaterals" type="xsd:string" type="f:tipo1"/>
+									<xsd:element name="automatic" 			type="xsd:string" type="f:tipo1"/>
+									<xsd:element name="cadiraNinPetit" 	type="xsd:string" type="f:tipo1"/>
 								</xsd:sequence>
 							</xsd:complexType>
 						</xsd:element>
@@ -32,14 +33,29 @@ elementFormDefault="qualified">
  						<xsd:complexType>
     					<xsd:simpleContent>
       					<xsd:extension base="xsd:string">
-        					<xsd:attribute name="tractament" type="xsd:string"/>
+        					<xsd:attribute name="tractament"  type="xsd:string" use="required"/>
      						</xsd:extension>
     					</xsd:simpleContent>
   					</xsd:complexType>
 					</xsd:element>
-					<xsd:element name="telefon" type="xsd:string"/>
+					<xsd:element name="telefon">
+ 						<xsd:simpleType>
+    					<xsd:restriction base="xsd:integer">
+     					 <xsd:minInclusive value="971230000"/>
+      					<xsd:maxInclusive value="971239999"/>
+    					</xsd:restriction>
+  					</xsd:simpleType>
+					</xsd:element>
 					<xsd:element name="email" 			type="xsd:string"/>
-					<xsd:element name="tipusClient" 	type="xsd:string"/>
+					<xsd:element name="tipusClient">
+						<xsd:simpleType>
+    					<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Premium"/>       
+								<xsd:enumeration value="Habitual"/>
+								<xsd:enumeration value="Ocasional"/>
+    					</xsd:restriction>
+  					</xsd:simpleType>
+					</xsd:element>
 					<xsd:element name="lloguer" 	maxOccurs="unbounded">
 						<xsd:complexType>
 							<xsd:sequence>
@@ -55,5 +71,21 @@ elementFormDefault="qualified">
 		</xsd:element>
 	</xsd:sequence>
 	</xsd:complexType>
+
+
+
+
+
+<xsd:simpleType name="tipo1">
+    <xsd:restriction base="xsd:string">
+    <xsd:pattern value="Si|No|Opcional"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+
+
+
+
+
 </xsd:element>
 </xsd:schema>
