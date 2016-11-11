@@ -12,13 +12,13 @@ elementFormDefault="qualified">
 					<xsd:sequence>
 						<xsd:element name="marca" 		type="xsd:string"/>
 						<xsd:element name="model" 		type="xsd:string"/>
-						<xsd:element name="equipacio" type="xsd:string" >
+						<xsd:element name="equipacio">
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="climatitzador" 	type="xsd:string" type="f:tipo1"/>
-									<xsd:element name="airbagsLaterals" type="xsd:string" type="f:tipo1"/>
-									<xsd:element name="automatic" 			type="xsd:string" type="f:tipo1"/>
-									<xsd:element name="cadiraNinPetit" 	type="xsd:string" type="f:tipo1"/>
+									<xsd:element name="climatitzador" 	type="f:tipo1"/>
+									<xsd:element name="airbagsLaterals" type="f:tipo1"/>
+									<xsd:element name="automatic" 			type="f:tipo1"/>
+									<xsd:element name="cadiraNinPetit"  type="f:tipo1"/>
 								</xsd:sequence>
 							</xsd:complexType>
 						</xsd:element>
@@ -42,7 +42,7 @@ elementFormDefault="qualified">
 					<xsd:element name="telefon">
  						<xsd:simpleType>
     					<xsd:restriction base="xsd:integer">
-     					 <xsd:minInclusive value="971230000"/>
+     					 	<xsd:minInclusive value="971230000"/>
       					<xsd:maxInclusive value="971239999"/>
     					</xsd:restriction>
   					</xsd:simpleType>
@@ -96,16 +96,6 @@ elementFormDefault="qualified">
     <xsd:pattern value="Sr|Sra"/>
     </xsd:restriction>
 </xsd:simpleType>
-
-
-
-
-
-
-<xsd:key name="cosa">
-<xsd:selector xpath="inmo:vendedor"/>
-<xsd:field xpath="inmo:"/>
-<xsd:key>
 
 
 
