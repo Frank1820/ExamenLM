@@ -20,16 +20,16 @@ xsi:schemaLocation="http://www.iessonferrer.net/jgonzalez/lloguerCotxes lloguer.
 	<model>Golf</model>
 	<color>Negre</color>
 	<equipacio>
-		<climatitzador>Opcional</climatitzador>
-		<airbagsLaterals>Si</airbagsLaterals>
-		<automatic>Si</automatic>
+		<climatitzador>yes</climatitzador>
+		<airbagsLaterals>No</airbagsLaterals>
+		<automatic>Maybe</automatic>
 		<cadiraNinPetit>No</cadiraNinPetit>
 	</equipacio>
 </cotxe>
 
 <client dni="42568525z">
 	<nom tractament="Sr">Antoni Pascual</nom>
-	<telefon>971230546</telefon>
+	<telefon>97123054657575757A</telefon>
 	<email>apascual@gmail.com</email>
 	<tipusClient>Premium</tipusClient>
 	<lloguer>
@@ -50,7 +50,7 @@ xsi:schemaLocation="http://www.iessonferrer.net/jgonzalez/lloguerCotxes lloguer.
 </client>
 
 <client dni="42568536l">
-	<nom tractament="Sra">Marta Soler</nom>
+	<nom tractament="Mr">Marta Soler</nom>
 	<telefon>971235685</telefon>
 	<email>psoler@gmail.com</email>
 	<tipusClient>Ocasional</tipusClient>
