@@ -12,6 +12,7 @@ elementFormDefault="qualified">
 					<xsd:sequence>
 						<xsd:element name="marca" 		type="xsd:string"/>
 						<xsd:element name="model" 		type="xsd:string"/>
+						<xsd:element name="color" type="xsd:string" minOccurs="0"/>
 						<xsd:element name="equipacio">
 							<xsd:complexType>
 								<xsd:sequence>
@@ -22,7 +23,6 @@ elementFormDefault="qualified">
 								</xsd:sequence>
 							</xsd:complexType>
 						</xsd:element>
-						<xsd:element name="color" type="xsd:string" minOccurs="0"/>
 					</xsd:sequence>
 					<xsd:attribute name="matricula" type="xsd:string" />
 				</xsd:complexType>
@@ -77,7 +77,7 @@ elementFormDefault="qualified">
 
 
 
-
+</xsd:element>
 
 <xsd:simpleType name="tipo1">
     <xsd:restriction base="xsd:string">
@@ -102,5 +102,5 @@ elementFormDefault="qualified">
 
 
 
-</xsd:element>
+
 </xsd:schema>
