@@ -7,7 +7,7 @@ elementFormDefault="qualified">
 <xsd:element name="lloguerCotxes">
 	<xsd:complexType>
 		<xsd:sequence>
-			<xsd:element name="cotxe">
+			<xsd:element name="cotxe" maxOccurs="unbounded">
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="marca" 		type="xsd:string"/>
@@ -27,7 +27,7 @@ elementFormDefault="qualified">
 					<xsd:attribute name="matricula" type="xsd:string" />
 				</xsd:complexType>
 			</xsd:element>
-		<xsd:element name="client">
+		<xsd:element name="client" maxOccurs="unbounded">
 			<xsd:complexType>
 				<xsd:sequence>
 					<xsd:element name="nom">
