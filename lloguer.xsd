@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
+elementFormDefault="qualified">
+<xsd:element name="lloguerCotxes">
+	<xsd:complexType>
+		<xsd:sequence>
+<xsd:element name="cotxe">
+	<xsd:complexType>
+		<xsd:sequence>
+
+
+
+
+
+
+
+
+
+
+
+
+</xsd:sequence>
+
+
+
+
+
+	</xsd:complexType>
+</xsd:element>
+<xsd:element name="client">
+	<xsd:complexType>
+		<xsd:sequence>
+
+
+
+
+
+
+
+
+
+
+
+
+</xsd:sequence>
+
+
+
+
+
+
+
+	</xsd:complexType>
+</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+</xsd:schema>
