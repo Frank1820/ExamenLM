@@ -2,6 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 xmlns:f="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 xmlns:c="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
+xmlns:e="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 targetNamespace="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 elementFormDefault="qualified">
 <xsd:element name="lloguerCotxes">
@@ -47,7 +48,7 @@ elementFormDefault="qualified">
     					</xsd:restriction>
   					</xsd:simpleType>
 					</xsd:element>
-					<xsd:element name="email" 			type="xsd:string"/>
+					<xsd:element name="email" 			type="e:tipo3"/>
 					<xsd:element name="tipusClient">
 						<xsd:simpleType>
     					<xsd:restriction base="xsd:string">
@@ -96,6 +97,17 @@ elementFormDefault="qualified">
     <xsd:pattern value="Sr|Sra"/>
     </xsd:restriction>
 </xsd:simpleType>
+
+
+
+ <xsd:simpleType name="tipo3"> 
+    <xsd:restriction base="xsd:string"> 
+      <xsd:pattern value="[^@]+@[^\.]+\..+"/> 
+    </xsd:restriction> 
+  </xsd:simpleType> 
+
+
+
 
 
 
