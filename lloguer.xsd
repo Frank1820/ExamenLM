@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 xmlns:f="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
+xmlns:c="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 targetNamespace="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 elementFormDefault="qualified">
 <xsd:element name="lloguerCotxes">
@@ -33,7 +34,7 @@ elementFormDefault="qualified">
  						<xsd:complexType>
     					<xsd:simpleContent>
       					<xsd:extension base="xsd:string">
-        					<xsd:attribute name="tractament"  type="xsd:string" use="required"/>
+        					<xsd:attribute name="tractament"  type="c:tipo2" use="required"/>
      						</xsd:extension>
     					</xsd:simpleContent>
   					</xsd:complexType>
@@ -76,11 +77,35 @@ elementFormDefault="qualified">
 
 
 
+
+
 <xsd:simpleType name="tipo1">
     <xsd:restriction base="xsd:string">
-    <xsd:pattern value="Si|No|Opcional"/>
+      <xsd:enumeration value="Si"/>
+      <xsd:enumeration value="No"/>
+      <xsd:enumeration value="Opcional"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+
+
+
+<xsd:simpleType name="tipo2">
+    <xsd:restriction base="xsd:string">
+    <xsd:pattern value="Sr|Sra"/>
     </xsd:restriction>
 </xsd:simpleType>
+
+
+
+
+
+
+<xsd:key name="cosa">
+<xsd:selector xpath="inmo:vendedor"/>
+<xsd:field xpath="inmo:"/>
+<xsd:key>
 
 
 
